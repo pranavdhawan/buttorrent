@@ -6,7 +6,6 @@ const Buffer = require('buffer').Buffer
 const urlParse = require('url').parse
 
 const torrent = bncode.decode(fs.readFileSync('puppy.torrent'))
-console.log(torrent.announce.toString('utf8'));
 
 const url = urlParse(torrent.announce.toString('utf8'))
 console.log(url)
